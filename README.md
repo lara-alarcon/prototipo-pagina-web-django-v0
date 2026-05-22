@@ -4,7 +4,7 @@ Este repositorio contiene la documentación y el plan arquitectónico de una pla
 
 ---
 
-## 🚀 Flujo de Trabajo y Metodología
+## Flujo de Trabajo y Metodología
 
 El objetivo principal de este proyecto fue diseñar, prototipar e implementar una plataforma web educativa que abarque conceptos de Inteligencia Artificial, Redes Neuronales y autores fundamentales. 
 
@@ -17,7 +17,7 @@ Para lograrlo, se siguió un enfoque ágil y moderno estructurado en las siguien
 
 ---
 
-## 🛠️ El Prompt Arquitectónico Utilizado
+## El Prompt Arquitectónico Utilizado
 
 A continuación, se presenta el prompt exacto que se diseñó e introdujo en la IA para obtener el prototipo visual de la plataforma:
 
@@ -148,45 +148,20 @@ IMPORTANT:
 - The design should feel like a real professional educational platform
 ```
 
-## 🎨 Implementación del Prototipo (v0)
+## Implementación del Prototipo (v0)
 
 Al procesar el prompt en v0, se obtuvo un diseño alineado con los estándares web modernos:
 
-* **Estética Visual:** Uso de fondos oscuros profundos (`#0F172A`) en contraste con un verde neón tecnológico (`#22C55E`) para los llamados a la acción y elementos destacados.
+* **Estética Visual:** Uso de fondos oscuros profundos en contraste con un verde neón tecnológico para los llamados a la acción y elementos destacados.
 * **Componentes Modulares:** Se estructuraron secciones limpias utilizando Tailwind CSS, separando el contenido introductorio de las tarjetas avanzadas del panel de control.
 * **Simulación de Estados:** La herramienta permitió simular interacciones en el cliente, como el cambio entre las pestañas de Login/Registro y la navegación interna por el contenido educativo.
 
 ---
 
-## ⏩ Siguiente Fase: Recreación en Django/Python Full-Stack
+## Continuación del Proyecto: Implementación Back-End
 
-Para transformar este prototipo visual en una aplicación web dinámica y funcional que cumpla con los requisitos del stack solicitado, el siguiente paso consiste en trasladar y recrear el proyecto en **Django**.
+El desarrollo visual y los componentes interactivos generados en esta fase sirvieron como cimiento (Frontend) para la aplicación definitiva. La lógica del negocio, el control de accesos, las bases de datos y la persistencia fueron trasladadas a un desarrollo nativo en lenguaje Python.
 
-### 🏛️ 1. Arquitectura del Proyecto (MVT)
-El sitio se divide siguiendo el patrón **Modelo-Vista-Plantilla** de Django:
-* **Modelos (`models.py`):** Creación de tablas en la base de datos para almacenar de forma dinámica la información de los autores, los tipos de redes neuronales y el registro de usuarios.
-* **Vistas (`views.py`):** Lógica encargada de gestionar las peticiones HTTP, controlar los accesos y procesar los formularios de inicio de sesión.
-* **Plantillas (`/templates`):** Reutilización de los estilos visuales y componentes generados en v0, integrándolos en archivos `.html` compatibles con el motor de plantillas de Django.
+👉 **[Haga clic aquí para ver la PARTE 2: Implementación Full-Stack en Django](https://github.com/lara-alarcon/web-educativa-ia-django)**
 
-### 🔒 2. Autenticación y Seguridad de Rutas
-Utilizando el sistema de autenticación nativo de Django (`django.contrib.auth`):
-* Los usuarios no registrados solo tienen acceso a la **Landing Page** pública.
-* El acceso al **Dashboard** educativo está estrictamente protegido mediante el decorador `@login_required` en las vistas.
-* Todos los formularios (Login/Registro) implementan tokens CSRF para evitar vulnerabilidades de seguridad.
 
-### 🧩 3. Modularización de Plantillas (Templates)
-Para evitar la duplicación de código, la interfaz de v0 se fragmenta en bloques heredables de Django:
-* **base.html:** Contiene la estructura global, llamadas a Tailwind CSS, la barra de navegación fija y el pie de página.
-* **landing.html:** Extiende de la base para mostrar la introducción corta y los primeros autores destacados.
-* **login.html:** Renderiza de forma limpia el formulario centrado y seguro para las credenciales.
-* **dashboard.html:** Carga de forma dinámica la información detallada (redes neuronales, autores de vanguardia y definiciones) extrayendo los datos directamente desde el backend.
-
----
-
-## 📋 Cumplimiento de la Consigna Académica
-
-Esta plataforma cumple estrictamente con los puntos solicitados en la actividad:
-* **Marco Teórico de IA:** Explicación formal citando a los autores Alan Turing, John McCarthy y Stuart Russell.
-* **Redes Neuronales Artificiales:** Definición analítica y clasificación detallada de sus variantes (Feedforward, CNN, RNN y GAN).
-* **Flujo de Navegación:** Estructura completa que viaja desde una landing informativa hacia un login, desbloqueando el panel de control educativo.
-* **Evolución Tecnológica:** Demostración práctica de cómo iniciar un desarrollo mediante herramientas No-Code de IA (v0) para acelerar el maquetado, migrando posteriormente a un desarrollo robusto y definitivo en **Django Python Full-Stack**.

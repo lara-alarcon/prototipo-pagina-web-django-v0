@@ -156,6 +156,7 @@ Al procesar el prompt en v0, se obtuvo un diseño alineado con los estándares w
 * **Componentes Modulares:** Se estructuraron secciones limpias utilizando Tailwind CSS, separando el contenido introductorio de las tarjetas avanzadas del panel de control.
 * **Simulación de Estados:** La herramienta permitió simular interacciones en el cliente, como el cambio entre las pestañas de Login/Registro y la navegación interna por el contenido educativo.
 
+> **Prototipo Estático en Vivo (Fase No-Code):** https://prototipo-web-v0.vercel.app
 ---
 
 ## Continuación del Proyecto: Implementación Back-End
